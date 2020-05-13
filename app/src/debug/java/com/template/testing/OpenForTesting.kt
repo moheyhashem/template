@@ -1,0 +1,4 @@
+package com.template.testing
+
+@Target(AnnotationTarget.CLASS)
+annotation class OpenForTesting

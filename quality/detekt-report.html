@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>detekt report</title>
+    <style>
+h2 {
+  background-color: #666666;
+  padding: 0.2em;
+  color: #ffffff;
+}
+h3 {
+  background-color:#f8dfdf;
+  padding:0.5em;
+}
+.rule {
+  background-color: #dddddd;
+  padding: 0.3em;
+  font-weight: bold;
+}
+.description {
+  color:#000000;
+  padding:0.3em;
+}
+.location {
+  color: #690505;
+  font-family: monospace;
+}
+.message {
+  font-size: 0.8em;
+  color: #444444;
+}
+.rule-container {
+  border: 0.1em dashed #dddddd;
+  padding: 0.1em;
+  line-height: 1.5em;
+}
+</style>
+</head>
+<body>
+
+<h1>detekt report</h1>
+
+<h2>Metrics</h2>
+
+<ul>
+<li>
+number of kt files: 78
+</li>
+<li>
+number of packages: 23
+</li>
+<li>
+number of classes: 78
+</li>
+<li>
+number of functions: 187
+</li>
+<li>
+number of properties: 86
+</li>
+</ul>
+
+<h2>Findings</h2>
+<h3>complexity</h3>
+<div class="rule-container">
+<span class="rule">
+TooManyFunctions
+</span>
+<span class="description">
+Too many functions inside a/an file/class/object/interface always indicate a violation of the single responsibility principle. Maybe the file/class/object/interface wants to manage too many things at once. Extract functionality which clearly belongs together.
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\di\AppModule.kt:34:1
+</span>
+<br />
+<span class="message">
+Class 'AppModule' with '12' functions detected. Defined threshold inside classes is set to '11'
+</span>
+</li>
+</ul>
+<h3>empty-blocks</h3>
+<div class="rule-container">
+<span class="rule">
+EmptyClassBlock
+</span>
+<span class="description">
+Empty block of code detected. As they serve no purpose they should be removed.
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\api\Response.kt:3:1
+</span>
+<br />
+<span class="message">
+The class or object  Response is empty.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\common\DomainTestUtils.kt:5:5
+</span>
+<br />
+<span class="message">
+The class or object  Companion is empty.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\common\DomainTestUtils.kt:5:5
+</span>
+<br />
+<span class="message">
+The class or object  Companion is empty.
+</span>
+</li>
+</ul>
+<div class="rule-container">
+<span class="rule">
+EmptySecondaryConstructor
+</span>
+<span class="description">
+Empty block of code detected. As they serve no purpose they should be removed.
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\entities\ProviderUI.kt:32:34
+</span>
+<br />
+<span class="message">
+This empty block of code can be removed.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\entities\SyndicateUI.kt:42:51
+</span>
+<br />
+<span class="message">
+This empty block of code can be removed.
+</span>
+</li>
+</ul>
+<div class="rule-container">
+<span class="rule">
+EmptyDefaultConstructor
+</span>
+<span class="description">
+Empty block of code detected. As they serve no purpose they should be removed.
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\util\DisplayMetrics.kt:6:21
+</span>
+<br />
+<span class="message">
+An empty default constructor can be removed.
+</span>
+</li>
+</ul>
+<h3>exceptions</h3>
+<div class="rule-container">
+<span class="rule">
+TooGenericExceptionCaught
+</span>
+<span class="description">
+Caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\viewmodel\TemplateViewModelFactory.kt:21:18
+</span>
+<br />
+<span class="message">
+Caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.
+</span>
+</li>
+</ul>
+<div class="rule-container">
+<span class="rule">
+TooGenericExceptionThrown
+</span>
+<span class="description">
+Thrown exception is too generic. Prefer throwing project specific exceptions to handle error cases.
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\viewmodel\TemplateViewModelFactory.kt:22:13
+</span>
+<br />
+<span class="message">
+RuntimeException is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case.
+</span>
+</li>
+</ul>
+<h3>formatting</h3>
+<div class="rule-container">
+<span class="rule">
+NoWildcardImports
+</span>
+<span class="description">
+Detects wildcast import usages
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\db\ProviderDao.kt:3:1
+</span>
+<br />
+<span class="message">
+Wildcard import
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\MainActivity.kt:23:1
+</span>
+<br />
+<span class="message">
+Wildcard import
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\util\Config.kt:6:1
+</span>
+<br />
+<span class="message">
+Wildcard import
+</span>
+</li>
+</ul>
+<div class="rule-container">
+<span class="rule">
+MaximumLineLength
+</span>
+<span class="description">
+Reports lines with exceeded length
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\mappers\SyndicateDataEntityMapper.kt:29:44
+</span>
+<br />
+<span class="message">
+Exceeded max line length (120)
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\MainActivity.kt:89:17
+</span>
+<br />
+<span class="message">
+Exceeded max line length (120)
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\MyApp.kt:14:51
+</span>
+<br />
+<span class="message">
+Exceeded max line length (120)
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\di\AppComponent.kt:13:16
+</span>
+<br />
+<span class="message">
+Exceeded max line length (120)
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\mappers\SyndicateEntityUIMapper.kt:29:44
+</span>
+<br />
+<span class="message">
+Exceeded max line length (120)
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\ui\syndicates\SyndicatesFragment.kt:62:26
+</span>
+<br />
+<span class="message">
+Exceeded max line length (120)
+</span>
+</li>
+</ul>
+<div class="rule-container">
+<span class="rule">
+SpacingAroundCurly
+</span>
+<span class="description">
+Reports spaces around curly braces
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\ui\home\HomeFragment.kt:27:8
+</span>
+<br />
+<span class="message">
+Missing spacing before "{"
+</span>
+</li>
+</ul>
+<div class="rule-container">
+<span class="rule">
+NoBlankLineBeforeRbrace
+</span>
+<span class="description">
+Detects blank lines before rbraces
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\ui\home\HomeFragment.kt:76:16
+</span>
+<br />
+<span class="message">
+Unexpected blank line(s) before "}"
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\ui\home\HomeFragment.kt:88:34
+</span>
+<br />
+<span class="message">
+Unexpected blank line(s) before "}"
+</span>
+</li>
+</ul>
+<div class="rule-container">
+<span class="rule">
+NoUnusedImports
+</span>
+<span class="description">
+Detects unused imports
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\ui\home\HomeFragment.kt:21:1
+</span>
+<br />
+<span class="message">
+Unused import
+</span>
+</li>
+</ul>
+<h3>naming</h3>
+<div class="rule-container">
+<span class="rule">
+VariableNaming
+</span>
+<span class="description">
+Variable names should follow the naming convention set in the projects configuration.
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\api\Request.kt:7:5
+</span>
+<br />
+<span class="message">
+Variable names should match the pattern: [a-z][A-Za-z0-9]*
+</span>
+</li>
+</ul>
+<div class="rule-container">
+<span class="rule">
+FunctionNaming
+</span>
+<span class="description">
+Function names should follow the naming convention set in the configuration.
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\usecases\CheckFavorite.kt:18:5
+</span>
+<br />
+<span class="message">
+Function names should match the pattern: ^([a-z$][a-zA-Z$0-9]*)|(`.*`)$
+</span>
+</li>
+</ul>
+<div class="rule-container">
+<span class="rule">
+MatchingDeclarationName
+</span>
+<span class="description">
+If a source file contains only a single non-private top-level class or object, the file name should reflect the case-sensitive name plus the .kt extension.
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\ui\common\CustomViewPager.kt:1:1
+</span>
+<br />
+<span class="message">
+The file name 'CustomViewPager.kt' does not match the name of the single top-level declaration 'SwipeLockableViewPager'.
+</span>
+</li>
+</ul>
+<h3>style</h3>
+<div class="rule-container">
+<span class="rule">
+MagicNumber
+</span>
+<span class="description">
+Report magic numbers. Magic number is a numeric literal that is not defined as a constant and hence it's unclear what the purpose of this number is. It's better to declare such numbers as constants and give them a proper name. By default, -1, 0, 1, and 2 are not considered to be magic numbers.
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\AppExecutors.kt:28:38
+</span>
+<br />
+<span class="message">
+This expression contains a magic number. Consider defining it to a well named constant.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\ui\syndicates\SyndicatesAdapter.kt:48:81
+</span>
+<br />
+<span class="message">
+This expression contains a magic number. Consider defining it to a well named constant.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\ui\syndicates\SyndicatesAdapter.kt:48:107
+</span>
+<br />
+<span class="message">
+This expression contains a magic number. Consider defining it to a well named constant.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\ui\syndicates\SyndicatesFragment.kt:103:28
+</span>
+<br />
+<span class="message">
+This expression contains a magic number. Consider defining it to a well named constant.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\ui\syndicates\SyndicatesFragment.kt:103:49
+</span>
+<br />
+<span class="message">
+This expression contains a magic number. Consider defining it to a well named constant.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\util\Config.kt:24:46
+</span>
+<br />
+<span class="message">
+This expression contains a magic number. Consider defining it to a well named constant.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\util\Config.kt:33:46
+</span>
+<br />
+<span class="message">
+This expression contains a magic number. Consider defining it to a well named constant.
+</span>
+</li>
+</ul>
+<div class="rule-container">
+<span class="rule">
+NewLineAtEndOfFile
+</span>
+<span class="description">
+Checks whether files end with a line separator.
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\api\ApiResponse.kt:24:1
+</span>
+<br />
+<span class="message">
+The file ApiResponse.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\api\Request.kt:9:1
+</span>
+<br />
+<span class="message">
+The file Request.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\api\requests\ProviderRequest.kt:17:13
+</span>
+<br />
+<span class="message">
+The file ProviderRequest.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\api\Response.kt:5:1
+</span>
+<br />
+<span class="message">
+The file Response.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\db\RoomHistoryCache.kt:58:1
+</span>
+<br />
+<span class="message">
+The file RoomHistoryCache.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\entities\ProviderData.kt:33:14
+</span>
+<br />
+<span class="message">
+The file ProviderData.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\entities\SyndicateData.kt:43:14
+</span>
+<br />
+<span class="message">
+The file SyndicateData.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\repositories\CachedTemplateDataStore.kt:39:1
+</span>
+<br />
+<span class="message">
+The file CachedTemplateDataStore.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\repositories\RemoteTemplateDataStore.kt:22:1
+</span>
+<br />
+<span class="message">
+The file RemoteTemplateDataStore.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\repositories\TemplateRepositoryImpl.kt:41:1
+</span>
+<br />
+<span class="message">
+The file TemplateRepositoryImpl.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\utils\TestsUtils.kt:6:1
+</span>
+<br />
+<span class="message">
+The file TestsUtils.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\common\DomainTestUtils.kt:29:1
+</span>
+<br />
+<span class="message">
+The file DomainTestUtils.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\common\Mapper.kt:22:1
+</span>
+<br />
+<span class="message">
+The file Mapper.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\common\TestTransformer.kt:10:1
+</span>
+<br />
+<span class="message">
+The file TestTransformer.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\common\Transformer.kt:5:59
+</span>
+<br />
+<span class="message">
+The file Transformer.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\entities\Optional.kt:19:1
+</span>
+<br />
+<span class="message">
+The file Optional.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\entities\ProviderEntity.kt:16:1
+</span>
+<br />
+<span class="message">
+The file ProviderEntity.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\entities\SyndicateEntity.kt:21:1
+</span>
+<br />
+<span class="message">
+The file SyndicateEntity.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\TemplateCache.kt:17:1
+</span>
+<br />
+<span class="message">
+The file TemplateCache.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\TemplateDataStore.kt:8:1
+</span>
+<br />
+<span class="message">
+The file TemplateDataStore.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\TemplateRepository.kt:8:1
+</span>
+<br />
+<span class="message">
+The file TemplateRepository.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\usecases\AddFavorite.kt:28:1
+</span>
+<br />
+<span class="message">
+The file AddFavorite.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\usecases\CheckFavorite.kt:28:1
+</span>
+<br />
+<span class="message">
+The file CheckFavorite.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\usecases\GetAllSyndicates.kt:17:1
+</span>
+<br />
+<span class="message">
+The file GetAllSyndicates.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\usecases\GetFavorites.kt:17:1
+</span>
+<br />
+<span class="message">
+The file GetFavorites.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\domain\usecases\UseCase.kt:13:1
+</span>
+<br />
+<span class="message">
+The file UseCase.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\common\ASyncTransformer.kt:13:1
+</span>
+<br />
+<span class="message">
+The file ASyncTransformer.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\common\BaseFragment.kt:51:1
+</span>
+<br />
+<span class="message">
+The file BaseFragment.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\common\SingleLiveEvent.kt:50:1
+</span>
+<br />
+<span class="message">
+The file SingleLiveEvent.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\di\AppComponent.kt:28:1
+</span>
+<br />
+<span class="message">
+The file AppComponent.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\di\DI.kt:9:1
+</span>
+<br />
+<span class="message">
+The file DI.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\entities\ProviderUI.kt:67:1
+</span>
+<br />
+<span class="message">
+The file ProviderUI.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\entities\SyndicateUI.kt:78:1
+</span>
+<br />
+<span class="message">
+The file SyndicateUI.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\mappers\SyndicateEntityUIMapper.kt:33:1
+</span>
+<br />
+<span class="message">
+The file SyndicateEntityUIMapper.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\ui\common\CustomFragmentPagerAdapter.kt:18:1
+</span>
+<br />
+<span class="message">
+The file CustomFragmentPagerAdapter.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\ui\common\CustomViewPager.kt:28:1
+</span>
+<br />
+<span class="message">
+The file CustomViewPager.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\util\AutoClearedValue.kt:41:64
+</span>
+<br />
+<span class="message">
+The file AutoClearedValue.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\util\Config.kt:47:1
+</span>
+<br />
+<span class="message">
+The file Config.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\util\MyJobService.kt:23:1
+</span>
+<br />
+<span class="message">
+The file MyJobService.kt is not ending with a new line.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\util\PreferencesHelper.kt:44:1
+</span>
+<br />
+<span class="message">
+The file PreferencesHelper.kt is not ending with a new line.
+</span>
+</li>
+</ul>
+<div class="rule-container">
+<span class="rule">
+WildcardImport
+</span>
+<span class="description">
+Wildcard imports should be replaced with imports using fully qualified class names. Wildcard imports can lead to naming conflicts. A library update can introduce naming clashes with your classes which results in compilation errors.
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\db\ProviderDao.kt:3:1
+</span>
+<br />
+<span class="message">
+android.arch.persistence.room.* is a wildcard import. Replace it with fully qualified imports.
+</span>
+</li>
+</ul>
+<div class="rule-container">
+<span class="rule">
+MaxLineLength
+</span>
+<span class="description">
+Line detected that is longer than the defined maximum line length in the code style.
+</span>
+</div>
+<ul>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\db\TemplateTypeConverters.kt:38:124
+</span>
+<br />
+<span class="message">
+Line detected that is longer than the defined maximum line length in the code style.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\data\mappers\SyndicateDataEntityMapper.kt:30:128
+</span>
+<br />
+<span class="message">
+Line detected that is longer than the defined maximum line length in the code style.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\MainActivity.kt:90:13
+</span>
+<br />
+<span class="message">
+Line detected that is longer than the defined maximum line length in the code style.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\MyApp.kt:15:152
+</span>
+<br />
+<span class="message">
+Line detected that is longer than the defined maximum line length in the code style.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\di\AppComponent.kt:14:127
+</span>
+<br />
+<span class="message">
+Line detected that is longer than the defined maximum line length in the code style.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\mappers\SyndicateEntityUIMapper.kt:30:130
+</span>
+<br />
+<span class="message">
+Line detected that is longer than the defined maximum line length in the code style.
+</span>
+</li>
+<li>
+<span class="location">
+E:\Work\Android\Kotlin\Template\app\src\main\java\com\template\presentation\ui\syndicates\SyndicatesFragment.kt:64:9
+</span>
+<br />
+<span class="message">
+Line detected that is longer than the defined maximum line length in the code style.
+</span>
+</li>
+</ul>
+
+</body>
+</html>

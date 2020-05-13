@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Template</string>
+    <string name="turn_on_gps">Please turn on your GPS</string>
+    <string name="turn_on_gps_for_store">Please turn on GPS to be able to load \n weather state</string>
+    <string name="retry">retry</string>
+    <string name="unknown_error">unknown error</string>
+
+    <string name="loading">جاري التحميل</string>
+    <string name="error">خطأ</string>
+    <string name="error_msg">نأسف لحدوث خطأ بالإتصال</string>
+    <string name="selectSubSyndicate">اختر النقابة الفرعية</string>
+
+    <string name="no_connection_cancel">إلغاء</string>
+    <string name="no_connection_retry">محاولة أخرى</string>
+
+    <string name="syndicates_title">اختر النقابة المفضلة</string>
+    <string name="home_title">الرئيسية</string>
+    <string name="logout_title">خروج</string>
+</resources>

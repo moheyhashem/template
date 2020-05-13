@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/syndicatesFragment"
+        android:name="com.template.presentation.ui.syndicates.SyndicatesFragment"
+        android:label="@string/syndicates_title"
+        tools:layout="@layout/syndicates_fragment">
+        <action
+            android:id="@+id/openHome"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.template.presentation.ui.home.HomeFragment"
+        android:label="@string/home_title"
+        tools:layout="@layout/home_fragment">
+    </fragment>
+</navigation>
